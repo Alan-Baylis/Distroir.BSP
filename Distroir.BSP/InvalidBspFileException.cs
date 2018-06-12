@@ -21,23 +21,23 @@ using System.Runtime.Serialization;
 namespace Distroir.BSP
 {
     [Serializable]
-    internal class FileFormatException : Exception
+    internal class InvalidBspFileException : Exception
     {
-        public FileFormatException()
+        public InvalidBspFileException()
         {
         }
 
-        public FileFormatException(string message) : base(message)
+        public InvalidBspFileException(string message) : base(message)
         {
         }
 
-        public FileFormatException(string message, Exception innerException) : base(message, innerException)
+        public InvalidBspFileException(string message, Exception innerException) : base(message, innerException)
         {
         }
 
-        protected FileFormatException(SerializationInfo info, StreamingContext context) : base(info, context)
+        protected InvalidBspFileException(SerializationInfo info, StreamingContext context) : base(info, context)
         {
         }
-        public override string Message => "Invalid file format!";
+        public override string Message => "The file you are trying to read is not a BSP file!";
     }
 }

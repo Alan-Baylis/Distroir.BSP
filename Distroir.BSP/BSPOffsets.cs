@@ -17,7 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 namespace Distroir.BSP
 {
-    public class BSPOffsets
+    public class BspOffsets
     {
         /// <summary>
         /// Calculates offset of lump
@@ -34,7 +34,7 @@ namespace Distroir.BSP
         /// </summary>
         /// <param name="lump">BSP Lump</param>
         /// <returns></returns>
-        public static int CalculateLumpOffset(BSPLumps lump)
+        public static int CalculateLumpOffset(BspLumpOffsets lump)
         {
             return CalculateLumpOffset((int)lump);
         }

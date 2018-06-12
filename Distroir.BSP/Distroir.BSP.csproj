@@ -34,12 +34,12 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BSPInfo.cs" />
-    <Compile Include="BSPLumpOffsets.cs" />
-    <Compile Include="BSPOffsets.cs" />
-    <Compile Include="BSPReader.cs" />
-    <Compile Include="BSPWriter.cs" />
-    <Compile Include="FileFormatException.cs" />
+    <Compile Include="BspInfo.cs" />
+    <Compile Include="BspLumpOffsets.cs" />
+    <Compile Include="BspOffsets.cs" />
+    <Compile Include="BspReader.cs" />
+    <Compile Include="BspWriter.cs" />
+    <Compile Include="InvalidBspFileException.cs" />
     <Compile Include="Lump.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

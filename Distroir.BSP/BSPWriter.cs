@@ -19,14 +19,14 @@ using System.IO;
 
 namespace Distroir.BSP
 {
-    public class BSPWriter
+    public class BspWriter
     {
         /// <summary>
         /// Writes BSP File header
         /// </summary>
         /// <param name="w">Binary Writer to write to</param>
         /// <param name="i">Informations about BSP info</param>
-        public static void WriteHeader(BinaryWriter w, BSPInfo i)
+        public static void WriteHeader(BinaryWriter w, BspInfo i)
         {
             //Set offset
             w.BaseStream.Position = 0;
@@ -64,7 +64,7 @@ namespace Distroir.BSP
         public static void WriteLump(BinaryWriter writer, Lump info, int lumpId)
         {
             //Set offset
-            writer.BaseStream.Position = BSPOffsets.CalculateLumpOffset(lumpId);
+            writer.BaseStream.Position = BspOffsets.CalculateLumpOffset(lumpId);
             //Write lump data
             WriteLump(writer, info);
         }
@@ -75,7 +75,7 @@ namespace Distroir.BSP
         /// <param name="writer">Binary writer to write to</param>
         /// <param name="info">Lump informations</param>
         /// <param name="lumpId">Id of lump</param>
-        public static void WriteLump(BinaryWriter writer, Lump info, BSPLumps lumpId)
+        public static void WriteLump(BinaryWriter writer, Lump info, BspLumpOffsets lumpId)
         {
             //Write lump informations
             WriteLump(writer, info, (int)lumpId);
@@ -102,7 +102,7 @@ namespace Distroir.BSP
             byte[] afterLump;
 
             //BSP informations
-            BSPInfo info;
+            BspInfo info;
             //Collection of all lumps
             Lump[] lumps = new Lump[64];
 
@@ -113,7 +113,7 @@ namespace Distroir.BSP
             using (BinaryReader r = new BinaryReader(input))
             {
                 //Read BSP informations
-                info = BSPReader.ReadInfo(r);
+                info = BspReader.ReadInfo(r);
                 lumps = info.Lumps;
 
                 //Get old lump
