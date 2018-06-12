@@ -17,7 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 namespace Distroir.BSP
 {
-    public class BspOffsets
+    class BspOffsets
     {
         /// <summary>
         /// Calculates offset of lump

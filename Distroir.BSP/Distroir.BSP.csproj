@@ -40,7 +40,7 @@
     <Compile Include="BspReader.cs" />
     <Compile Include="BspWriter.cs" />
     <Compile Include="InvalidBspFileException.cs" />
-    <Compile Include="Lump.cs" />
+    <Compile Include="BspLump.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
