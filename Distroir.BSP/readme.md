@@ -13,7 +13,7 @@ Distroir.BSP library allows you to easily read and edit BSP files. Things you ca
 - Overwriting lump informations
 - Overwriting lump data
 
-## Code exampless
+## Code exampless (obsolette)
 
 #### Reading BSP file header
 
